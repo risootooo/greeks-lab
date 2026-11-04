@@ -1,0 +1,102 @@
+{
+  "trade_date": "2026-11-03",
+  "expiry": "2026-11-09",
+  "days_to_expiry": 6,
+  "spot": 23810.85,
+  "lot_size": 65,
+  "liquid_strikes": 114,
+  "atm_strike": 23800.0,
+  "atm_iv_pct": 15.342401263739658,
+  "atm_ce_iv_pct": 10.761843092241918,
+  "atm_pe_iv_pct": 19.922959435237395,
+  "smile_band_min_iv_pct": 11.227709023290553,
+  "smile_band_max_iv_pct": 36.36396867460739,
+  "smile_put_5pct_otm_iv_pct": 24.42391186978122,
+  "smile_call_5pct_otm_iv_pct": 17.644925241461245,
+  "smile_min": {
+    "strike": 23850.0,
+    "iv_pct": 11.227709023290553,
+    "kind": "CE"
+  },
+  "smile_max": {
+    "strike": 20050.0,
+    "iv_pct": 52.083916630700465,
+    "kind": "PE"
+  },
+  "parity": {
+    "implied_forward": 23689.73421935001,
+    "fitted_discount": 0.9508969865400154,
+    "expected_discount": 0.9989320774848636,
+    "residual_std_points": 155.2464076527512,
+    "spot": 23810.85,
+    "forward_minus_spot": -121.11578064998685,
+    "n_strikes": 72
+  },
+  "net_gex_rs_crore": 12618.845963075808,
+  "gamma_flip": 23871.80298493091,
+  "max_pain": 23600.0,
+  "max_pain_vs_spot_pct": -0.8855206764983081,
+  "theta_series": [
+    {
+      "date": "2026-10-28",
+      "spot": 22698.85,
+      "days_to_expiry": 12,
+      "atm_strike": 22700.0,
+      "ce": 275.45,
+      "pe": 248.35,
+      "straddle": 523.8,
+      "fixed_strike": 22700.0,
+      "fixed_straddle": 523.8
+    },
+    {
+      "date": "2026-10-29",
+      "spot": 22936.75,
+      "days_to_expiry": 11,
+      "atm_strike": 22950.0,
+      "ce": 252.3,
+      "pe": 201.0,
+      "straddle": 453.3,
+      "fixed_strike": 22700.0,
+      "fixed_straddle": 529.6
+    },
+    {
+      "date": "2026-10-30",
+      "spot": 23053.1,
+      "days_to_expiry": 10,
+      "atm_strike": 23050.0,
+      "ce": 210.9,
+      "pe": 209.4,
+      "straddle": 420.3,
+      "fixed_strike": 22700.0,
+      "fixed_straddle": 533.8000000000001
+    },
+    {
+      "date": "2026-11-02",
+      "spot": 23440.8,
+      "days_to_expiry": 7,
+      "atm_strike": 23450.0,
+      "ce": 137.35,
+      "pe": 234.65,
+      "straddle": 372.0,
+      "fixed_strike": 22700.0,
+      "fixed_straddle": 709.55
+    },
+    {
+      "date": "2026-11-03",
+      "spot": 23810.85,
+      "days_to_expiry": 6,
+      "atm_strike": 23800.0,
+      "ce": 149.9,
+      "pe": 224.75,
+      "straddle": 374.65,
+      "fixed_strike": 22700.0,
+      "fixed_straddle": 1049.05
+    }
+  ],
+  "theta_decay_pts": 149.14999999999998,
+  "theta_decay_pct": 28.474608629247804,
+  "theta_decay_rs_per_lot": 9694.749999999998,
+  "fixed_decay_pts": -525.25,
+  "fixed_decay_pct": -100.27682321496756,
+  "fixed_decay_rs_per_lot": -34141.25
+}
