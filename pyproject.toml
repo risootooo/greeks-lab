@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "greekslab"
+version = "1.0.0"
+description = "Derivatives pricing & options analytics: BSM/binomial/Monte Carlo pricers, 1st- and 2nd-order Greeks, an arbitrage-aware IV solver, and NSE option-chain analytics (IV smile, GEX, gamma flip, max pain)."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.26", "pandas>=2.0", "scipy>=1.11"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
