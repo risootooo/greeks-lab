@@ -1,6 +1,6 @@
 # GreeksLab
 
-![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white) ![release](https://img.shields.io/github/v/release/risootooo/greeks-lab)
 ![Tests](https://img.shields.io/badge/tests-47%20passing-brightgreen)
 ![Data](https://img.shields.io/badge/data-real%20NSE%20bhavcopy-orange)
 ![Greeks](https://img.shields.io/badge/Greeks-1st%20%2B%202nd%20order-blue)
