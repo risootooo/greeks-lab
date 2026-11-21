@@ -11,9 +11,20 @@ import numpy as np
 import pandas as pd
 
 
+def _empty_svg(w, h, message="No data"):
+    return (f'<svg viewBox="0 0 {w} {h}" width="100%" role="img">'
+            f'<rect width="{w}" height="{h}" fill="#151924"/>'
+            f'<text x="{w/2}" y="{h/2}" fill="#8b93a7" font-size="12" '
+            f'text-anchor="middle">{message}</text></svg>')
+
+
 def _svg_line(xs, ys, w=860, h=300, color="#4cc9f0", xlabel="", ylabel=""):
     xs = np.asarray(xs, float); ys = np.asarray(ys, float)
+    if xs.size == 0 or ys.size == 0:
+        return _empty_svg(w, h)
     x0, x1 = xs.min(), xs.max(); y0, y1 = ys.min(), ys.max()
+    if x1 == x0:  # single / constant x: widen so the scale is finite
+        x0 -= 1.0; x1 += 1.0
     ypad = (y1 - y0) * 0.12 or 1.0; y0 -= ypad; y1 += ypad
     px = 46; py = 26
     X = lambda v: px + (v - x0) / (x1 - x0) * (w - px - 14)
@@ -39,6 +50,8 @@ def _svg_line(xs, ys, w=860, h=300, color="#4cc9f0", xlabel="", ylabel=""):
 
 def _svg_bars(strikes, values, w=860, h=300):
     strikes = np.asarray(strikes, float); values = np.asarray(values, float)
+    if strikes.size == 0 or values.size == 0:
+        return _empty_svg(w, h)
     vmax = np.abs(values).max() or 1.0
     px = 46; py = 26
     bw = (w - px - 14) / len(strikes)

@@ -1,7 +1,7 @@
 # GreeksLab
 
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white) ![release](https://img.shields.io/github/v/release/risootooo/greeks-lab)
-![Tests](https://img.shields.io/badge/tests-47%20passing-brightgreen)
+![Tests](https://img.shields.io/badge/tests-52%20passing-brightgreen)
 ![Data](https://img.shields.io/badge/data-real%20NSE%20bhavcopy-orange)
 ![Greeks](https://img.shields.io/badge/Greeks-1st%20%2B%202nd%20order-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -19,7 +19,7 @@ Black-Scholes-Merton, binomial and Monte Carlo pricers that cross-check each oth
 ```bash
 pip install -r requirements.txt        # numpy, pandas, scipy (+ pytest for tests)
 python main.py                         # three pricers cross-check + real-chain analytics
-python -m pytest tests -q              # 47 tests
+python -m pytest tests -q              # 52 tests
 ```
 
 Open `docs/dashboard.html` — a self-contained dark dashboard (IV smile + GEX-by-strike from the real 3 Nov 2026 chain, works offline, no CDN).
@@ -37,7 +37,7 @@ The repo ships a small extracted sample chain (`data/sample_nifty_chain.csv`, 22
 | `src/greekslab/strategies.py` | Straddle, strangle, iron condor, vertical spreads: expiry payoff, aggregate Greeks, max P/L, breakevens |
 | `src/greekslab/report.py` | Self-contained HTML dashboard generator (inline SVG) |
 | `docs/CASES.md` | Three case studies on real data (below) |
-| `tests/` | 47 tests: put-call parity, binomial→BS convergence, MC within 3 SE of BS, every Greek vs finite differences (incl. vanna/charm/vomma, ATM and OTM), IV round-trips, real-chain invariants, strategy payoff identities |
+| `tests/` | 52 tests: put-call parity, binomial→BS convergence, MC within 3 SE of BS, every Greek vs finite differences (incl. vanna/charm/vomma, ATM and OTM), IV round-trips, real-chain invariants, strategy payoff identities |
 
 ## The maths
 
